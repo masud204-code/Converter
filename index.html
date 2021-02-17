@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Converter</title>
+	<link rel="stylesheet" href="class.css">
+</head>
+<body>
+
+	<div class="header">
+        <h1><i>Currency Converter</i></h1>
+  
+    </div>
+
+
+    <table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#c6a9a3">
+  <tr>
+  	 <td>
+  	 	<table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
+           <tr>
+           	   <td align="center" valign="middle" height="150">
+           	   	 <h3>
+           	   	 	<marquee behavior="alternate" direction="left" scrollamount="2">
+           	   	 	<font face="arial" color="#ffffff" size="6">
+           	   	     Hi, I'm Md.Masudur Rahaman
+           	   	    </font>
+           	   	   </marquee>
+           	   	</h3>
+           	   	 <h1>
+           	   	 	<marquee behavior="alternate" direction="right" scrollamount="2">
+           	   	 	<font face="arial" color="#ffcc29" size="7">
+           	   	      A student in the CSE department at DIU<br>(ID:181-15-11230)
+           	   	    </font>
+           	   	</marquee>
+           	   	</h1>
+           	   </td>
+           </tr>
+        </table>
+      </td>
+    </tr>
+ </table>
+
+
+
+<div class="row">
+
+	<div class="column left">
+	    <h2 class="hed2"><u>Subject to one taka of Bangladesh</u></h2><br/>
+	    <p><b>Bangladesh = 1 Taka.</b><br/><br/><b>Indian = 0.86 Ripee.</b><br/><br/><b
+	   >Us = 0.012 Doller.</b><br/><br/><b>Southi = 0.044 Riyal.</b></p>
+	</div>
+
+
+
+	<div class="column middle">
+	
+ 
+    <h2 class="hed"><b><u>Select Currency.</u></b></h2>
+
+	<select name="Currency" id="inputcountrys" onchange="forstTosecond()"  onclick="forstTosecond()" oninput="forstTosecond()">
+		<option value="Taka">Bangladesh Taka</option>
+		<option value="Ripee">Indian Ripee</option>
+		<option value="Doller">Us Doller</option>
+		<option value="Riyal">Southi Riyal</option>
+	</select>
+	<input type="number" name="first" onclick="forstTosecond()" oninput="forstTosecond()" id="firstcurrency">
+
+	<h2 class="hed"><u>Currency Converter.</u></h2>
+	<select id="outputcountrys" onchange="forstTosecond()" onclick="forstTosecond()" oninput="forstTosecond()">
+		<option value="Taka1">Bangladesh Taka</option>
+		<option value="Ripee1">Indian Ripee</option>
+		<option value="Doller1">Us Doller</option>
+		<option value="Riyal1">Southi Riyal</option>
+	</select>
+
+	<input type="number" name="second" id="secondcurrency"><br>
+	
+	<button type="button" class="btn btn-info" onclick="document.location.reload(true)"
+            name="button">Reload</button>
+
+
+	<script type="text/javascript">
+		function forstTosecond()
+		{
+			var input1=document.getElementById("firstcurrency").value;
+			var input2=document.getElementById("secondcurrency").value;
+
+			if(document.getElementById("inputcountrys").value=='Taka'){
+
+
+				if (document.getElementById("outputcountrys").value=='Taka1'){
+
+						document.getElementById("secondcurrency").value=input1*1;
+				}
+
+				else if (document.getElementById("outputcountrys").value=='Ripee1'){
+					
+						document.getElementById("secondcurrency").value=input1*0.86;
+				}
+
+				else if (document.getElementById("outputcountrys").value=='Doller1'){
+					
+						document.getElementById("secondcurrency").value=input1*0.012;
+				}
+
+				else if (document.getElementById("outputcountrys").value=='Riyal1'){
+					
+						document.getElementById("secondcurrency").value=input1*0.044;
+				}
+				
+			}
+
+
+			else if(document.getElementById("inputcountrys").value=='Ripee')
+			{
+
+
+				if (document.getElementById("outputcountrys").value=='Taka1'){
+
+						document.getElementById("secondcurrency").value=input1*1.17;
+				}
+
+				else if (document.getElementById("outputcountrys").value=='Ripee1'){
+					
+						document.getElementById("secondcurrency").value=input1*1;
+				}
+
+				else if (document.getElementById("outputcountrys").value=='Doller1'){
+					
+						document.getElementById("secondcurrency").value=input1*0.014;
+				}
+
+				else if (document.getElementById("outputcountrys").value=='Riyal1'){
+					
+						document.getElementById("secondcurrency").value=input1*0.052;
+				}
+				
+			}
+
+
+			else if(document.getElementById("inputcountrys").value=='Doller')
+			{
+
+
+				if (document.getElementById("outputcountrys").value=='Taka1'){
+
+						document.getElementById("secondcurrency").value=input1*84.84;
+				}
+
+				else if (document.getElementById("outputcountrys").value=='Ripee1'){
+					
+						document.getElementById("secondcurrency").value=input1*72.80;
+				}
+
+				else if (document.getElementById("outputcountrys").value=='Doller1'){
+					
+						document.getElementById("secondcurrency").value=input1*1;
+				}
+
+				else if (document.getElementById("outputcountrys").value=='Riyal1'){
+					
+						document.getElementById("secondcurrency").value=input1*3.75;
+				}
+				
+			}
+
+
+			else if(document.getElementById("inputcountrys").value=='Riyal')
+			{
+
+
+				if (document.getElementById("outputcountrys").value=='Taka1'){
+
+						document.getElementById("secondcurrency").value=input1*22.62;
+				}
+
+				else if (document.getElementById("outputcountrys").value=='Ripee1'){
+					
+						document.getElementById("secondcurrency").value=input1*19.41;
+				}
+
+				else if (document.getElementById("outputcountrys").value=='Doller1'){
+					
+						document.getElementById("secondcurrency").value=input1*0.27;
+				}
+
+				else if (document.getElementById("outputcountrys").value=='Riyal1'){
+					
+						document.getElementById("secondcurrency").value=input1*1;
+				}
+				
+			}
+			
+
+	
+
+		}
+	</script>
+	
+
+	</div>
+
+
+	<div class="column right">
+	    <h2 class="hed2"><u>Country flag</u></h2>
+	    <ol>
+	    	<p>Bangladesh .</p>
+		    <li><img src="download.png" wight="200px" height="42px" title="Bangladesh"></li>
+            <p>Indian .</p>
+		    <li><img src="download5.png" wight="300px" height="42px"></li>
+		    <p>Indian .</p>
+		    <li><img src="download3.png" wight="120px" height="42px"></li> 
+		    <p>Southi .</p>
+            <li><img src="download2.png" wight="150px" height="42px"></li> 
+        </ol>
+	</div>
+
+</div>
+ <div class="foot">
+	    <footer>
+           <p>&reg; 2021 create Md.Masudur Rahaman.</p>
+          
+        </footer>
+    </div>  
+
+</body>
+</html>
